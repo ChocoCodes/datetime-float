@@ -5,10 +5,19 @@ let formattedDate = document.getElementById('formatted-date')
 let formattedTime = document.getElementById('formatted-time')
 
 
+
 // Arrow Funcitons - Shortcut for functions declarations
 // if 1 digit format to e.g: 01, 02. 09, else retain e.g: 10, 11, 12
 const formatNum = (num) => num < 10 ? `0${num}` : num;
 
+
+const changeName = () => {
+    let guest = document.getElementById('guest')
+    let nameInput = document.getElementById('name')
+    const guestName = nameInput.value
+
+    guest.innerText = `Hi ${guestName}! The time is:`
+}
 // Shortcut string concatenation
 // let a = "a" + "a" = "aa"
 // let b = "b"
